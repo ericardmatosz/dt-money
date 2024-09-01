@@ -23,6 +23,14 @@
       "category": "Educação",
       "price": 1980,
       "createdAt": "2024-08-20T17:30:19.482Z"
+    },
+    {
+      "category": "Venda",
+      "description": "Criacao de APP",
+      "price": 100000,
+      "type": "income",
+      "createdAt": "2024-09-01T20:41:13.406Z",
+      "id": 4
     }
   ]
 }
