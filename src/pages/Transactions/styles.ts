@@ -3,11 +3,16 @@ import styled from "styled-components";
 export const TransactionsContainer = styled.main`
   width: 100%;
   max-width: 1120px;
-  margin: 4rem auto 0;
+  margin: 1rem auto 0;
   padding: 0 1.5rem;
+
+  @media (min-width: 768px) {
+    margin: 4rem auto 0;
+  }
 `;
 
 export const TransactionsTable = styled.table`
+  display: none;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 0.5rem;
