@@ -4,13 +4,23 @@ export const SummaryContainer = styled.section`
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1rem;
 
   margin-top: -5rem;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 1.5rem;
+    gap: 2rem;
+  }
 `;
 
 interface SummaryCardProps {
@@ -32,7 +42,12 @@ export const SummaryCard = styled.div<SummaryCardProps>`
   strong {
     display: block;
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    min-width: 210px;
+
+    @media (min-width: 1024px) {
+      font-size: 2rem;
+    }
   }
 
   ${(props) =>
