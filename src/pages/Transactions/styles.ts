@@ -11,16 +11,33 @@ export const TransactionsContainer = styled.main`
   }
 `;
 
+export const TableContainer = styled.div`
+  max-width: 100%;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+`;
+
 export const TransactionsTable = styled.table`
-  display: none;
+  /* display: none; */
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 0.5rem;
   margin-top: 1.5rem;
+  min-width: max-content;
 
   td {
     padding: 1.25rem 2rem;
     background: ${(props) => props.theme["gray-700"]};
+
+    font-size: 12px;
+    min-width: min-content;
+
+    @media (min-width: 768px) {
+      font-size: inherit;
+    }
 
     &:first-child {
       border-top-left-radius: 6px;
