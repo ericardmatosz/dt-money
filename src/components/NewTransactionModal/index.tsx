@@ -22,7 +22,13 @@ const newTransactionFormSchema = z.object({
 
 type NewTransactionInputs = z.infer<typeof newTransactionFormSchema>;
 
-export function NewTransactionModal() {
+interface NewTransactionModalProps {
+  setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export function NewTransactionModal({
+  setOpenModal,
+}: NewTransactionModalProps) {
   const {
     control,
     register,
@@ -51,6 +57,7 @@ export function NewTransactionModal() {
     });
 
     reset();
+    setOpenModal(false);
   }
 
   return (
